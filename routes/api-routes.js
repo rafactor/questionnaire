@@ -21,13 +21,17 @@ module.exports = function(app) {
 
   // POST route for saving a new questionnaire
   app.post("/api/questionnaires", function(req, res) {
+    console.log(req.body);
     
-    let questionnaire = {
-        name: req.body.name,
-        type: req.body.type
-    }
+    // let questionnaire = {
+    //     name: req.body.name,
+    //     type: req.body.type
+    // }
 
-    db.Questionnaire.create(questionnaire).then(function(response) {
+    db.Questionnaire.create({
+      name: req.body.name,
+      type: req.body.type
+  }).then(function(response) {
       res.json(response);
     });
 

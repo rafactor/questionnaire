@@ -16,5 +16,13 @@ module.exports = function(sequelize, DataTypes) {
       }
 
     });
+
+    Questionnaire.associate = function(models){
+      // Associate Questionnaire with Questions
+      Questionnaire.hasMany(models.question, {
+        onDelete: "cascade"
+      });
+    };
+
     return Questionnaire;
   };
