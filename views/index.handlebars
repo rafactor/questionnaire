@@ -1,3 +1,19 @@
-<bddy>
-  <h1>Hey</h1>
-</bddy>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  {{> nav/nav}}
+  {{!-- {{> nav/drawer}} --}}
+
+  <div class="mdl-layout__content">
+    <div class="page-content">
+      {{> main/layout}}
+
+      {{> main/footer}}
+      {{!-- {{> main/questionnaires}} --}}
+    </div>
+  </div>
+
+
+
+  {{!-- {{> quest/quest}} --}}
+
+</div>

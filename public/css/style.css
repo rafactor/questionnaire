@@ -1,2 +1,10 @@
 body {
-  color: red; }
+  color: orange; }
+
+.mdl-grid {
+  margin-top: 50px; }
+
+.mdl-cell {
+  color: white;
+  background-color: aqua;
+  border: 1px solid white; }
